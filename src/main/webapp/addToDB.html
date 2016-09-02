@@ -13,8 +13,9 @@
 <body>
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="index.html">Home</a> <a href="addToDV.html">Add</a> <a
-			href="displayGameDB.jsp">Read</a> <a href="#">Update</a> <a href="#">Delete</a>
+		<a href="index.html">Home</a> <a href="addToDB.html">Add</a> <a
+			href="displayGameDB.jsp">Read</a> <a href="updateDB.jsp">Update</a> <a
+			href="delete.jsp">Delete</a>
 	</div>
 
 	<div id="main">
@@ -27,42 +28,56 @@
 		<main>
 		<form class="navbar-form" action="addToDB" method="post">
 			<div class="form-group">
-				<label for="inputGamelevel"> Game Level</label><br> <input
-					type="text" class="form-control" id="inputGameLevel"
-					placeholder="Game Level" name="gameLevel"><br> <label
-					for="inputGamelocation"> Game Location</label><br> <input
-					type="text" class="form-control" id="inputGameLocation"
-					placeholder="Game Location" name="gameLocation"><br> <label
-					for="inputDate"> Date</label><br> <input type="text"
-					class="form-control" id="inputDate" placeholder="Date" name="date"><br>
-
+				<div>
+					<label for="inputGamelevel"> Game Level</label><br> <input
+						type="text" class="form-control" id="inputGameLevel"
+						placeholder="Game Level" name="gameLevel"><br>
+				</div>
+				<div>
+					<label for="inputGamelocation"> Game Location</label><br> <input
+						type="text" class="form-control" id="inputGameLocation"
+						placeholder="Game Location" name="gameLocation"><br>
+				</div>
+				<div>
+					<label for="inputDate"> Date</label><br> <input type="text"
+						class="form-control" id="inputDate" placeholder="Date" name="date"><br>
+				</div>
 				<label for="inputTime"> Time</label><br> <input type="text"
 					class="form-control" id="inputTime" placeholder="Time" name="time"><br>
-
+			</div>
+			<div>
 				<label for="inputHomeTeam"> Home Team</label><br> <input
 					type="text" class="form-control" id="inputHomeTeam"
-					placeholder="Home Team" name="homeTeam"><br> <label
-					for="inputAwayTeam"> Away Team</label><br> <input type="text"
-					class="form-control" id="inputAwayTeam" placeholder="Away Team"
-					name="awayTeam"><br> <label for="inputHomeTeamScore">
-					Home Team Score</label><br> <input type="text" class="form-control"
-					id="inputHomeTeamScore" placeholder="Home Team Score"
-					name="homeTeamScore"><br> <label
-					for="inputAwayTeamScore"> Away Team Score</label><br> <input
+					placeholder="Home Team" name="homeTeam"><br>
+			</div>
+			<div>
+				<label for="inputAwayTeam"> Away Team</label><br> <input
+					type="text" class="form-control" id="inputAwayTeam"
+					placeholder="Away Team" name="awayTeam"><br>
+			</div>
+			<div>
+				<label for="inputHomeTeamScore">Home Team Score</label><br> <input
+					type="text" class="form-control" id="inputHomeTeamScore"
+					placeholder="Home Team Score" name="homeTeamScore"><br>
+			</div>
+			<div>
+				<label for="inputAwayTeamScore"> Away Team Score</label><br> <input
 					type="text" class="form-control" id="inputAwayTeamScore"
 					placeholder="Away Team Score" name="awayTeamScore"><br>
-
+			</div>
+			<div>
 				<label for="inputGameWinner"> Game Winner</label><br> <input
 					type="text" class="form-control" id="inputGameWinner"
 					placeholder="Game Winner" name="gameWinner"><br>
 			</div>
-			<br>
+	</div>
+	<br>
 
-			<button type="submit" class="btn btn-success">Add</button>
+	<button type="submit" class="btn btn-success">Add</button>
 
-		</form>
+	</form>
 
-		</main>
+	</main>
 	</div>
 
 
@@ -73,7 +88,7 @@
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous"></script>
-		<script>
+	<script>
 		function openNav() {
 			document.getElementById("mySidenav").style.width = "250px";
 			document.getElementById("main").style.marginLeft = "250px";
